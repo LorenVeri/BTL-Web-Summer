@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@keyframes login_success {
+    from {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes from-bottom {
+    from {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes from-o1 {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes from-o2 {
+    from {
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes from-right {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.f-top {
+    animation: from-top ease 1s;
+}
+
+.f-bot {
+    animation: from-bottom ease 1s;
+}
+
+.f-right {
+    animation: from-right ease 1.5s;
+}
+
+.f-left {
+    animation: from-left ease-in-out 1.5s;
+}
+
+.f-n {
+    animation: from-o1 ease-in-out 1.5s;
+}
+
+.f-m {
+    animation: from-o2 ease-in-out 1.5s;
+}
+
+.container {
+    position: relative;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #cd2122;
+    animation: login_success ease 1s;
+}
+
+.login {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+}
+
+.login .col {
+    padding: 20px 15px;
+    border: 0.6px solid rgb(128, 126, 126);
+    border-radius: 12px;
+    margin-top: 40%;
+}
+
+.login a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+    animation: login_success ease 1.5s;
+    padding: 5px 15px 0 0 ;
+}
+
+.login a:hover {
+    color: red;
+    opacity: 1;
+}
+
+.form-group label {
+    font-weight: 650;
+}
+
+

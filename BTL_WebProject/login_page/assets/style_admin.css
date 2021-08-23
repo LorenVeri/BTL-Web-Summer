@@ -1,0 +1,117 @@
+
+/* CSS for all */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ 
+.bd-circle {
+    border-radius: 50%;
+    size: 100%;
+}
+
+.card-body {
+    padding: 20px;
+    height: 100%;
+}
+
+.main {
+    margin-top: 25px;
+}
+
+span {
+    color: #647279;
+}
+
+h5 {
+    margin-bottom: 0;
+}
+
+.bd-rd {
+    border: 1px solid #647279;
+    border-radius: 12px;
+    padding: 0;
+}
+
+.icon-center {
+    text-align: center;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+a:active {
+    color: royalblue;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+
+/* End CSS for all */
+
+
+
+
+/* Sidebar */
+.sidebar .navbar {
+    position: relative;
+    border-bottom: 1px solid rgb(201, 199, 199);
+    padding-left: 0;
+}
+
+
+
+.navbar-brand {
+    position: absolute;
+    right: 0;
+}
+
+.nav-link {
+    color: #647279;
+    padding-bottom: 0;
+}
+/* End Sidebar */
+
+/* Wrapper */
+/* Header - Main */
+.header-main {
+    padding: 30px 30px 30px 0;
+    color: #647279;
+}
+
+.header-main span {
+    font-weight: 600;
+}
+
+.header-main h2 {
+    margin-top: 10px;
+    color: black;
+}
+
+/* End Header - Main */
+
+/* Status */
+.bd-rd {
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 12px;
+    padding: 0;
+}
+/* End Status */
+
+/* User */
+.user {
+
+}
+/* End User */
+.image-news {
+    max-width: 250px;
+}
+
+.image-news img {
+    width: 100%;
+}
+/* End Wrapper */
+
+
+
