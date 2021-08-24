@@ -285,6 +285,15 @@ h3 {
     width: 100%;
 }
 
+#wrapper a:hover .news-img{
+    transform: scale(2,2);
+    -moz-transform: scale(2,2);
+    -webkit-transform: scale(2,2);
+    -o-transform: scale(2,2);
+    -ms-transform: scale(2,2);
+}
+
+
 #wrapper .place {
     color: #cd2122;
     text-decoration: none;

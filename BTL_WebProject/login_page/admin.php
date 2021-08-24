@@ -75,6 +75,7 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">STT</th>
+                                                <th scope="col">Ảnh đại diện</th>
                                                 <th scope="col">Tên</th>
                                                 <th scope="col">Tên người dùng</th>
                                                 <th scope="col">Công việc</th>
@@ -98,14 +99,16 @@
                                             ?>
                                             <tr>
                                                 <th scope="row"><span><?php echo $i ?></span></th>
+                                                <td><div class="avatar-user" style="width: 150px">
+                                                    <img src="<?php echo $row1['avatar'] ?>" alt="avatar-user" style="width: 100%">
+                                                </div></td>
                                                 <td>
-                                                    <img src="" alt="">
                                                     <?php echo $row1['name'] ?>
                                                 </td>
                                                 <td><span><?php echo $row1['username'] ?></span></td>
                                                 <td><span><?php echo $row1['work'] ?></span></td>
                                                 <td><span><?php echo $row1['email'] ?></span></td>
-                                                <td><a href="./info.php"><i class="fas fa-user-plus icon-center"></i></i></a></td>
+                                                <td><a href="info.php?id=<?php echo $row1['id'] ?>"><i class="fas fa-user-plus icon-center"></i></i></a></td>
                                                 <td><a href="edit_user.php?id=<?php echo $row1['id'] ?>"><i class="fas fa-pencil-alt icon-center"></i></a></td>
                                                 <td><a href="./user-manager/delete_user.php?id=<?php echo $row1['id'] ?>"><i class="far fa-trash-alt icon-center"></i></a></td>
                                             </tr>

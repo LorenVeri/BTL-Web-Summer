@@ -22,18 +22,7 @@
                             <a class="nav-link text-black" href="#">Khoa</a>
                         </li>
                     </ul>
-                    <?php
-                    $sql1 = "SELECT * FROM tb_admin";
-                    $result1 = mysqli_query($conn, $sql1);
-                    //Xử lý dữ liệu 
-                    if (mysqli_num_rows($result1) > 0) {
-                        $row1 = mysqli_fetch_assoc($result1);
-                    ?>
-                        
-                        <a class="navbar-brand" href=""><i class="fas fa-user"></i></a>  
-                    <?php
-                    }
-                    ?>
+                        <a class="navbar-brand" href="login_form.php">Đăng xuất</a>  
                 </nav>
             </div>
         </div>

@@ -68,8 +68,8 @@
                     <div class="col-sm bd-rd" style="width: 100%;">
                         <div class="card-body">
                             <div class="title">
-                                <h5>Thông tin người dùng</h5>
-                                <span>Quản trị viên</span>
+                                <h5>Danh sách tin tức</h5>
+                                <span>Thông tin</span>
                             </div>
                             <div class="main">
                                 <table class="table">

@@ -11,37 +11,37 @@
     <link rel="stylesheet" href="./assets/style_admin.css">
     <link rel="stylesheet" href="./assets/style_info.css">
     <title> Quản lý người dùng</title>
-    
+
 </head>
 
 
 <?php
-    include ("./assets/config/connect.php");
-    // require ("../login_page/user-manager/edit_user.php");
-    if (isset($_POST['submit_add'])) {
-        $fullname =  $_POST['name'];
-        $username =  $_POST['username'];
-        $pass =  $_POST['password'];
-        $avatar = $_POST['avatar'];
-        $work = $_POST['work'];
-        $email =  $_POST['email'];
-        $phone =  $_POST['phone'];
-        $intro =  $_POST['intro'];
-        // Mã hóa password
-        $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
+include("./assets/config/connect.php");
+// require ("../login_page/user-manager/edit_user.php");
+if (isset($_POST['submit_add'])) {
+    $fullname =  $_POST['name'];
+    $username =  $_POST['username'];
+    $pass =  $_POST['password'];
+    $avatar = $_POST['avatar'];
+    $work = $_POST['work'];
+    $email =  $_POST['email'];
+    $phone =  $_POST['phone'];
+    $intro =  $_POST['intro'];
+    // Mã hóa password
+    $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO tb_admin(username, password, avatar, work, name, email, sđt, intro) 
+    $sql = "INSERT INTO tb_admin(username, password, avatar, work, name, email, sđt, intro) 
                    VALUES ('$username', '$pass', '$avatar', '$work','$fullname', '$email', '$phone', '$intro')";
 
-        if(mysqli_query($conn, $sql)) {
-            header('location: ./admin.php');
-        }
+    if (mysqli_query($conn, $sql)) {
+        header('location: ./admin.php');
     }
-    ?>
+}
+?>
 
 <body>
     <?php
-    include ("./assets/template/header_teamplate.php");
+    include("./assets/template/header_teamplate.php");
     ?>
     <!-- Header -->
     <div class="wrapper">
@@ -49,7 +49,7 @@
             <!-- Title -->
             <div class="header-main">
                 <i class="fas fa-home"></i> <i class="fas fa-angle-right" style="padding: 0 10px;"></i> <span>Thông tin</span>
-                <h2>Thông tin</h2>
+                <h2>Thêm mới</h2>
             </div>
             <!-- Form info -->
             <div class="row">
@@ -87,7 +87,7 @@
                             <div class="form-intro">
                                 <span for="form-intro" class="f-right">Giới thiệu</span>
                                 <textarea rows="5" type="text" class="form-control form-control-line" name="intro"></textarea>
-                            </div>         
+                            </div>
                             <button class="btn btn-danger f-bot" id="submit_add" name="submit_add" style="margin-top: 20px;">Thêm mới</button>
                             <a href="./admin.php" class="btn btn-danger f-bot" style="margin-top: 20px;">Hủy</a>
                         </form>
@@ -97,7 +97,7 @@
         </div>
     </div>
 
-    
+
     <!-- End Header -->
     <!-- Wrapper -->
     <!-- JS -->
