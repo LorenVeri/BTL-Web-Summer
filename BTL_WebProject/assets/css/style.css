@@ -277,20 +277,13 @@ h3 {
     transition: all 0.35s;
 }
 
-#wrapper .col-sm-4 {
-    border: 1px solid #000;
-}
-
 #wrapper .news-img {
     width: 100%;
 }
 
-#wrapper a:hover .news-img{
-    transform: scale(2,2);
-    -moz-transform: scale(2,2);
-    -webkit-transform: scale(2,2);
-    -o-transform: scale(2,2);
-    -ms-transform: scale(2,2);
+.hover-scale:hover .news-img{
+    transform: scale(1.1,1.1);
+    transition: 0.5s;
 }
 
 
@@ -348,7 +341,7 @@ h3 {
 /* list-item - event */
 .list-item {
     position: relative;
-    padding-bottom: 23px;
+    padding-bottom: 48px;
 }
 
 .list-item a {

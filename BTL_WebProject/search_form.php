@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="sub-heading">
+                <h3 class="sub-heading" style="margin-top: 40px;">
                     TÌM KIẾM THÔNG TIN
                 </h3>
                 <form action="./search.php" method="POST" role="form">

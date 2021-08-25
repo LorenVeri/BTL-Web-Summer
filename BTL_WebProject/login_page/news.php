@@ -64,7 +64,7 @@
         
         <!-- Talbe Information -->
         <div class="user" style="margin-top: 20px;">
-                <div class="row">
+                <div class="row" style="margin: 0 20px;">
                     <div class="col-sm bd-rd" style="width: 100%;">
                         <div class="card-body">
                             <div class="title">
@@ -107,9 +107,9 @@
                                             <td><span><?php echo $row1['title'] ?></span></td>
                                             <td><span><?php echo $row1['date'] ?></span></td>
                                             <td><span><?php echo $row1['content'] ?></span></td>
-                                            <td><a href="./info.php"><i class="fas fa-user-plus icon-center"></i></i></a></td>
-                                            <td><a href="./user-manager/edit_user.php?id=<?php echo $row1['id'] ?>"><i class="fas fa-pencil-alt icon-center"></i></a></td>
-                                            <td><a href="./user-manager/delete_user.php?id=<?php echo $row1['id'] ?>"><i class="far fa-trash-alt icon-center"></i></a></td>
+                                            <td><a href="./add_news.php"><i class="fas fa-user-plus icon-center"></i></i></a></td>
+                                            <td><a href="./edit_news.php?id=<?php echo $row1['id'] ?>"><i class="fas fa-pencil-alt icon-center"></i></a></td>
+                                            <td><a href="./news-manager/delete_news.php?id=<?php echo $row1['id'] ?>"><i class="far fa-trash-alt icon-center"></i></a></td>
                                         </tr>
                                         <?php 
                                             } 
