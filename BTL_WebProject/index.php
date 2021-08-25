@@ -37,7 +37,7 @@
           if (mysqli_num_rows($result1) > 0) {
             while ($row1 = mysqli_fetch_assoc($result1)) {
               echo '<div class="col-sm-4">';
-              echo '<a href="#" class="hover-scale"> <img src="' . $row1['img'] . '" alt="" class="news-img"> </a>';
+              echo '<div><a href="#" class="hover-scale" style="overflow: hidden;"> <img src="' . $row1['img'] . '" alt="" class="news-img"> </a></div>';
               echo '<a href="#" class="title text-black">
                 <h5 class="title"> ' . $row1['title'] . ' </h5>
                 </a>';
@@ -212,25 +212,55 @@
     <h3 class="sub-heading">
       KHOA
     </h3>
+      
+    <!-- radio buttons -->
+    <input type="radio" name="radio-btn" id="radio1">
+    <input type="radio" name="radio-btn" id="radio2">
+    <input type="radio" name="radio-btn" id="radio3">
+    <input type="radio" name="radio-btn" id="radio4">
+    <!-- radio buttons end-->
     <div class="row">
+      <!-- slide images  -->
       <div class="col-sm-3">
-        box-1
+        <div class="item">
+          <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-NN-new.jpg" alt="" style="width: 100%">
+          <div class="name">
+            Name-1
+          </div>
+        </div>
+      </div> 
+      <div class="col-sm-3">
+        <div class="item">
+          <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-Dien-DT-new.jpg" alt="" style="width: 100%">
+          <div class="name">
+            Name-1
+          </div>
+        </div>
       </div>
       <div class="col-sm-3">
-        box-2
+        <div class="item">
+          <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-Toan-new.jpg" alt="" style="width: 100%">
+          <div class="name">
+          Name-1
+          </div>
+        </div>
       </div>
       <div class="col-sm-3">
-        box-3
+        <div class="item">
+          <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-CNTT-new.jpg" alt="" style="width: 100%">
+          <div class="name">
+          Name-1
+          </div>
+        </div>
       </div>
-      <div class="col-sm-3">
-        box-4
-      </div>
-    </div>
+      <!-- slide images end -->
   </div>
 </div>
+  </div>
 
   </div>
   <!-- Khoa -->
+
   <!-- End Khoa -->
   <!-- End Wrapper -->
   <!-- JS -->

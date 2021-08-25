@@ -15,8 +15,8 @@
         <div class="row login">
             <div class="col">
                 <h3 > Đăng Nhập </h3>
-                <a href="../index.php" class="close"> <i class="fas fa-times"></i> </a>
-                <form method="POST" role="form" id="form_Signin" action="./login_form.php">
+                <a href="login_form.php" class="close"> <i class="fas fa-times"></i> </a>
+                <form method="POST" role="form" id="form_Signin" action="./login_form.php" style="position: relative;">
                     <div class="form-group">
                         <label for="user_signin" class="f-right">Tên đăng nhập</label>
                         <input type="text" class="form-control f-n" name="username">
@@ -26,17 +26,20 @@
                         <input type="password" class="form-control f-m" name="password">
                     </div>
                     <button class="btn btn-danger f-bot" id="submit_signin" name="submit_signin">Đăng nhập</button> 
+                    <a href="register_admin.php" class="btn btn-danger" style="color:#FFF; margin-top: 32%; text-align: center; padding: 5px 10px">
+                        Đăng ký
+                    </a> 
                 </form>
             </div>
         </div>
     </div>
     <?php
-    include ("../login_page/assets/config/connect.php");
+    include ("../login_page/assets/config/connect-tlu.php");
     if (isset($_POST['submit_signin'])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
         //Truy vấn dữ liệu trong bảng
-        $sql = "SELECT * FROM tb_admin WHERE username='$username' AND password = '$password'";
+        $sql = "SELECT * FROM admin WHERE username='$username' AND password = '$password'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) == 1) {
