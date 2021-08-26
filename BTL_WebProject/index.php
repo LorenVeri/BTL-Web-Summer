@@ -268,5 +268,71 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<style>
+  footer {
+    background-color: #252429;
+  }
+  .title-footer {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  .item-footer {
+    color: rgb(212, 212, 212);
+  }
+  .card-footer {
+    text-align: center;
+    background-color: #1f1e23;
+    color: white;
+  }
+</style>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <p class="title-footer">Giáo dục</p>
+        <div class="item-footer">Danh mục ngành</div>
+        <div class="item-footer">Hướng dẫn học vụ</div>
+        <div class="item-footer">Công khai thông tin</div>
+        <div class="item-footer">Tra cứu văn bằng</div>
+      </div>
+      <div class="col-md-2">
+        <p class="title-footer">Khoa học công nghệ</p>
+        <div class="item-footer">Công bố mới</div>
+        <div class="item-footer">Đã công bố</div>
+        <div class="item-footer">Bằng sáng chế</div>
+        <div class="item-footer">Tạp chí khoa học</div>
+        <div class="item-footer">Quỹ khoa học- công nghệ</div>
+      </div>
+      <div class="col-md-2">
+        <p class="title-footer">Đơn vị trực thuộc</p>
+        <div class="item-footer">Khoa-Trường</div>
+        <div class="item-footer">Viện-Trung tâm</div>
+        <div class="item-footer">Phòng ban</div>
+        <div class="item-footer">Trường quốc tế Việt Nam-Phần Lan</div>
+      </div>
+      <div class="col-md-2">
+        <p class="title-footer">Thông tin</p>
+        <div class="item-footer">Liên hệ</div>
+        <div class="item-footer">Tuyển dụng</div>
+        <div class="item-footer">Trải nghiệm</div>
+        <div class="item-footer">Sơ đồ trang</div>
+      </div>
+      <div class="col-md-4">
+        <p class="title-footer">ĐẠI HỌC TÔN ĐỨC THẮNG</p>
+        <div class="item-footer">
+          Số 19 Nguyễn Hữu Thọ, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh,
+          Việt Nam. <br>
+          Kết nối với TDTU <a href="https://www.facebook.com/tonducthanguniversity"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a> <a href="https://www.youtube.com/user/DhTonDucThang"><img src="https://img.icons8.com/office/40/000000/youtube-play.png"/></a> <a href="https://www.linkedin.com/school/ton-duc-thang-university"><img src="https://img.icons8.com/color-glass/48/000000/twitter.png"/></a> <a href="https://twitter.com/tonducthanguniv"><img src="https://img.icons8.com/color-glass/48/000000/linkedin.png"/></a>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <p>Copyright © 2021 Đại học Tôn Đức Thắng</p>
+  </div>
+</footer>
 
 </html>
