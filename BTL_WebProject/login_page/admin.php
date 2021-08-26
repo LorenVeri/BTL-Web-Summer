@@ -16,9 +16,9 @@
     <?php
     include("../login_page/assets/config/connect-tlu.php");
     session_start();
-    // if(!isset($_SESSION['login'])) {
-    //     header('location: ./login_form.php');
-    // } 
+    if(!isset($_SESSION['submit_signin'])) {
+        header('location: ./login_form.php');
+    } 
     ?>
 
     <!-- Header -->
@@ -108,14 +108,19 @@
                                             $i = 0;
                                             while ($row1 = mysqli_fetch_assoc($result1)) {
                                                 $i++;
+                                                //Lấy tên đơn vị từ bảng đơn vị 
                                                 $id_dv = $row1['id_don_vi'];
                                                 $sql3 = "SELECT * FROM don_vi WHERE id = $id_dv";
-                                                $name_dv = 0;
+                                                $result3 = mysqli_query($conn, $sql3);
+                                                $row3 = mysqli_fetch_assoc($result3);
+                                                $name_dv = $row3['name'];
     
-    
+                                                //lấy tên chức vụ từ bảng chức vụ
                                                 $id_cv = $row1['id_chuc_vu'];
                                                 $sql4 = "SELECT * FROM chuc_vu WHERE id = $id_cv";
-                                                $name_cv = 0;
+                                                $result4 = mysqli_query($conn, $sql4);
+                                                $row4 = mysqli_fetch_assoc($result4);
+                                                $name_cv = $row4['name'];
     
                                         ?>
                                                 <tr>

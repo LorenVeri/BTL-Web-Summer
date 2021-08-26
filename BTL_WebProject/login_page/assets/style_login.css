@@ -63,11 +63,11 @@
 
 @keyframes scale {
     from {
-        transform: scale(1,1);
+        transform: scale(0,0);
         opacity: 0;
     }
     to {
-        transform: scale(1.2,1.2);
+        transform: scale(1,1);
         opacity: 1;
     }
 }

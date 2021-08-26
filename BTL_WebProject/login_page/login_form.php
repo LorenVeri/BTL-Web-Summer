@@ -26,9 +26,6 @@
                         <input type="password" class="form-control f-m" name="password">
                     </div>
                     <button class="btn btn-danger f-bot" id="submit_signin" name="submit_signin">Đăng nhập</button> 
-                    <a href="register_admin.php" class="btn btn-danger" style="color:#FFF; margin-top: 32%; text-align: center; padding: 5px 10px">
-                        Đăng ký
-                    </a> 
                 </form>
             </div>
         </div>
@@ -41,9 +38,9 @@
         //Truy vấn dữ liệu trong bảng
         $sql = "SELECT * FROM admin WHERE username='$username' AND password = '$password'";
         $result = mysqli_query($conn, $sql);
-
+        session_start();
         if (mysqli_num_rows($result) == 1) {
-            $_SESSION['login'] = $username;
+            $_SESSION['submit_signin'] = 'username';
             header('location: ./admin.php');
         } else {
             echo '<div class="container"> 
