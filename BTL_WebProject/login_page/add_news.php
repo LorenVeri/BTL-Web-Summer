@@ -16,15 +16,13 @@
 
 
 <?php
-include("./assets/config/connect.php");
-// require ("../login_page/user-manager/edit_user.php");
+include("./assets/config/connect-tlu.php");
+
 if (isset($_POST['submit_add'])) {
     $title =  $row['title'];
     $image_news =  $row['image_news'];
     $date =  $row['date'];
     $content = $row['content'];
-    // Mã hóa password
-    $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO tb_news(title, date, img, content) 
                    VALUES ('$title', '$date', '$image_news', '$content')";
@@ -54,7 +52,7 @@ if (isset($_POST['submit_add'])) {
                         <form method="POST" role="form" id="form_Signin" action="./add_news.php">
                             <div class="form-title">
                                 <span for="form-tilte" class="f-right">Tiêu đề</span>
-                                <input type="text" class="form-control f-n" name="title" value="<?php echo $title ?>">
+                                <input type="text" class="form-control f-n" name="title">
                             </div>
                             <div class="form-img">
                                 <span for="form-img" class="f-right">Ảnh tin tức</span>
@@ -62,7 +60,7 @@ if (isset($_POST['submit_add'])) {
                             </div>
                             <div class="form-date">
                                 <span for="pass_signin" class="f-right">Ngày diễn ra </span>
-                                <input type="date" class="form-control f-m" name="date">
+                                <input type="text" class="form-control f-m" name="date">
                             </div>
                             <div class="form-content">
                                 <span for="form-content" class="f-right">Nội dung</span>

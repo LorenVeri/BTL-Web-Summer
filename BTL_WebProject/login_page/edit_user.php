@@ -16,7 +16,7 @@
 
 
 <?php
-include("./assets/config/connect.php");
+include("./assets/config/connect-tlu.php");
 ?>
 
 <body>
@@ -34,19 +34,16 @@ include("./assets/config/connect.php");
             <!-- Form info -->
             <?php
             $id_edit = $_GET['id'];
-            $sql = "SELECT * FROM tb_admin WHERE id = '$id_edit'";
+            $sql = "SELECT * FROM can_bo WHERE id = '$id_edit'";
             $result = mysqli_query($conn, $sql);
             //Xử lý dữ liệu 
             while ($row = mysqli_fetch_assoc($result)) {
                 $id_edit = $row['id'];
-                $fullname =  $row['name'];
-                $username =  $row['username'];
-                $pass =  $row['password'];
-                $avatar = $row['avatar'];
-                $work = $row['work'];
+                $avatar =  $row['avatar'];
+                $fullname =  $row['fullname'];
                 $email =  $row['email'];
-                $phone =  $row['sđt'];
-                $intro =  $row['intro'];
+                $phone_number = $row['phone_number'];
+                $address = $row['address'];
             }
             ?>
             <div class="row">
@@ -62,41 +59,28 @@ include("./assets/config/connect.php");
                                 <span for="form-id" class="f-right">ID</span>
                                 <input type="text" class="form-control f-n" name="id" value="<?php echo $id_edit ?>">
                             </div>
-                            <div class="form-name">
-                                <span for="form-name" class="f-right">Tên người dùng</span>
-                                <input type="text" class="form-control f-n" name="name" value="<?php echo $fullname ?>">
-                            </div>
-                            <div class="form-username">
-                                <span for="form-username" class="f-right">Tên đăng nhập</span>
-                                <input type="text" class="form-control f-n" name="username" value="<?php echo $username ?>">
-                            </div>
-                            <div class="form-password">
-                                <span for="pass_signin" class="f-right">Mật khẩu</span>
-                                <input type="password" class="form-control f-m" name="password" value="<?php echo $pass ?>">
-                            </div>
                             <div class="form-avatar">
                                 <span for="form-avatar" class="f-right">Ảnh đại diện</span>
-                                <input type="text" class="form-control f-m" name="avatar" value="<?php echo $avatar ?>">
+                                <input type="text" class="form-control f-n" name="avatar" value="<?php echo $avatar ?>">
                             </div>
-                            <div class="form-work">
-                                <span for="form-work" class="f-right">Nghề nghiệp</span>
-                                <input type="text" class="form-control f-m" name="work" value="<?php echo $work ?>">
+                            <div class="form-fullname">
+                                <span for="form-fullname" class="f-right">Tên giảng viên</span>
+                                <input type="text" class="form-control f-n" name="fullname" value="<?php echo $fullname ?>">
                             </div>
                             <div class="form-email">
-                                <span for="form-email" class="f-right">Email</span>
-                                <input type="text" class="form-control f-m" name="email" value="<?php echo $email ?>">
+                                <span for="form-email" class="f-right">Địa chỉ Email</span>
+                                <input type="email" class="form-control f-m" name="email" value="<?php echo $email ?>">
                             </div>
                             <div class="form-phone">
                                 <span for="form-phone" class="f-right">Số điện thoại</span>
-                                <input type="text" class="form-control f-m" name="phone" value="<?php echo $phone ?>">
+                                <input type="text" class="form-control f-m" name="phone_number" value="<?php echo $phone_number ?>">
                             </div>
-                            
-                            <div class="form-intro">
-                                <span for="form-intro" class="f-right">Giới thiệu</span>
-                                <input type="text" class="form-control f-m" name="intro" value="<?php echo $intro ?>">
+                            <div class="form-address">
+                                <span for="form-address" class="f-right">Địa chỉ</span>
+                                <input type="text" class="form-control f-m" name="address" value="<?php echo $address ?>">
                             </div>
                             <button class="btn btn-danger f-bot" id="submit_edit" name="submit_edit" style="margin-top: 20px;">Cập nhật</button>
-                            <a href="./admin.php" class="btn btn-danger f-bot" style="margin-top: 20px;">Hủy</a>
+                            <a href="./news.php" class="btn btn-danger f-bot" style="margin-top: 20px;">Hủy</a>
                         </form>
                     </div>
                 </div>

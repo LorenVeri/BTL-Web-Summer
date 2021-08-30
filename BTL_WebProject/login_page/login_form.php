@@ -13,19 +13,20 @@
 <body style="background-color: #ccc;">
     <div class="container">
         <div class="row login">
-            <div class="col">
+            <div class="col a-scale">
                 <h3 > Đăng Nhập </h3>
                 <a href="login_form.php" class="close"> <i class="fas fa-times"></i> </a>
                 <form method="POST" role="form" id="form_Signin" action="./login_form.php" style="position: relative;">
                     <div class="form-group">
-                        <label for="user_signin" class="f-right">Tên đăng nhập</label>
-                        <input type="text" class="form-control f-n" name="username">
+                        <label for="user_signin"  autofocus>Tên đăng nhập</label>
+                        <input type="text" class="form-control" name="username">
                     </div>
                     <div class="form-group">
-                        <label for="pass_signin" class="f-right">Mật khẩu</label>
-                        <input type="password" class="form-control f-m" name="password">
+                        <!-- class="f-right" f-n f-m-->
+                        <label for="pass_signin" >Mật khẩu</label>
+                        <input type="password" class="form-control" name="password">
                     </div>
-                    <button class="btn btn-danger f-bot" id="submit_signin" name="submit_signin">Đăng nhập</button> 
+                    <button class="btn btn-danger" id="submit_signin" name="submit_signin">Đăng nhập</button> 
                 </form>
             </div>
         </div>

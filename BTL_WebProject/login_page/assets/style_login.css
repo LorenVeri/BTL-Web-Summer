@@ -124,6 +124,7 @@ h3 {
     border: 0.6px solid rgb(128, 126, 126);
     border-radius: 12px;
     margin-top: 40%;
+    /* background-color: #ccc; */
 }
 
 .login a {
@@ -144,4 +145,17 @@ h3 {
     font-weight: 650;
 }
 
+.form-group input {
+    border-radius: 18px;
+}
+
+.btn {
+    border-radius: 18px;
+}
+
+body {
+    background-image: url('./image-admin/bg-login/KMetFQX5UXdhydvbBzUxDA-1200-80.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 

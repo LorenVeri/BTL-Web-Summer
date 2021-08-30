@@ -1,5 +1,5 @@
 <?php 
-    include ("../assets/config/connect.php");
+    include ("../assets/config/connect-tlu.php");
     $id_delete = $_GET['id'];
 
     // B2: truy vấn xóa

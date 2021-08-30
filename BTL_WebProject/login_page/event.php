@@ -65,6 +65,7 @@
                                             <th scope="col">Ảnh</th>
                                             <th scope="col">Tiêu đề</th>
                                             <th scope="col">Ngày</th>
+                                            <th scope="col">Tháng</th>
                                             <th scope="col">Nội dung</th>
                                             <th scope="col">Thêm mới</th>
                                             <th scope="col">Sửa</th>
@@ -74,7 +75,7 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                            $sql2 = "SELECT * FROM tb_news";
+                                            $sql2 = "SELECT * FROM tb_event";
                                             $result1 = mysqli_query($conn, $sql2);
 
                                             //Xử lý dữ liệu 
@@ -87,15 +88,16 @@
                                             <th scope="row"><span><?php echo $i ?></span></th>
                                             <td>
                                                 <div class="image-news" style="max-width: 250px;">
-                                                    <img src="<?php echo $row1['img'] ?>" alt="Ảnh tin tức" style="width: 100%;">
+                                                    <img src="<?php echo $row1['img'] ?>" alt="Ảnh sự kiện" style="width: 100%;">
                                                 </div>
                                             </td>
                                             <td><span><?php echo $row1['title'] ?></span></td>
-                                            <td><span><?php echo $row1['date'] ?></span></td>
+                                            <td><span><?php echo $row1['day'] ?></span></td>
+                                            <td><span><?php echo $row1['month'] ?></span></td>
                                             <td><span><?php echo $row1['content'] ?></span></td>
-                                            <td><a href="./add_news.php"><i class="fas fa-user-plus icon-center"></i></i></a></td>
-                                            <td><a href="./edit_news.php?id=<?php echo $row1['id'] ?>"><i class="fas fa-pencil-alt icon-center"></i></a></td>
-                                            <td><a href="./news-manager/delete_news.php?id=<?php echo $row1['id'] ?>"><i class="far fa-trash-alt icon-center"></i></a></td>
+                                            <td><a href="./add_event.php"><i class="fas fa-user-plus icon-center"></i></i></a></td>
+                                            <td><a href="./edit_event.php?id=<?php echo $row1['id'] ?>"><i class="fas fa-pencil-alt icon-center"></i></a></td>
+                                            <td><a href="./news-manager/delete_event.php?id=<?php echo $row1['id'] ?>"><i class="far fa-trash-alt icon-center"></i></a></td>
                                         </tr>
                                         <?php 
                                             } 

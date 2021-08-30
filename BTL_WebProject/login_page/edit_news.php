@@ -10,13 +10,13 @@
     <!-- CSS for me -->
     <link rel="stylesheet" href="./assets/style_admin.css">
     <link rel="stylesheet" href="./assets/style_info.css">
-    <title> Cập nhật người dùng</title>
+    <title> Cập nhật tin tức</title>
 
 </head>
 
 
 <?php
-include("./assets/config/connect.php");
+include("./assets/config/connect-tlu.php");
 ?>
 
 <body>
@@ -52,7 +52,7 @@ include("./assets/config/connect.php");
                 </div>
                 <div class="col-sm-8 bd-rd">
                     <div class="card-body">
-                        <form method="POST" role="form" id="form_Signin" action="./add_news.php">
+                        <form method="POST" role="form" id="form_Signin" action="./news-manager/edit_info_news.php">
                             <div class="form-title">
                                 <span for="form-tilte" class="f-right">Tiêu đề</span>
                                 <input type="text" class="form-control f-n" name="title" value="<?php echo $title ?>">
@@ -63,13 +63,13 @@ include("./assets/config/connect.php");
                             </div>
                             <div class="form-date">
                                 <span for="pass_signin" class="f-right">Ngày diễn ra </span>
-                                <input type="date" class="form-control f-m" name="date" value="<?php echo $date ?>">
+                                <input type="text" class="form-control f-m" name="date" value="<?php echo $date ?>">
                             </div>
                             <div class="form-content">
                                 <span for="form-content" class="f-right">Nội dung</span>
                                 <input type="text" class="form-control f-m" name="content" value="<?php echo $content ?>">
                             </div>
-                            <button class="btn btn-danger f-bot" id="submit_add" name="submit_add" style="margin-top: 20px;">Thêm mới</button>
+                            <button class="btn btn-danger f-bot" id="submit_add" name="submit_add" style="margin-top: 20px;">Cập nhật</button>
                             <a href="./news.php" class="btn btn-danger f-bot" style="margin-top: 20px;">Hủy</a>
                         </form>
                     </div>

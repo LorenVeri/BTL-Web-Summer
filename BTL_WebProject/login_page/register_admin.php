@@ -23,7 +23,7 @@ if (isset($_POST['submit_register'])) {
     $password_hash = password_hash($pass, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO admin(fullname, username, password, number_phone, email) 
-                       VALUES ('$fullname', '$username', '$password_hash', '$phone','$email')";
+                       VALUES ('$fullname', '$username', '$password_hash', '$phone', '$email')";
 
     if (mysqli_query($conn, $sql)) {
         header('location: login_form.php');
@@ -64,6 +64,7 @@ if (isset($_POST['submit_register'])) {
                         <label for="phone" class="">Số điện thoại</label>
                         <input type="text" class="form-control" name="phone">
                     </div>
+                   
                     <button class="btn btn-danger " id="submit_register" name="submit_register">Đăng ký</button>
                 </form>
             </div>

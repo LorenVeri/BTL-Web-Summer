@@ -13,10 +13,10 @@
                         <a class="nav-link text-black" href="../login_page/news.php">Tin Tức</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="../login_page/amission.php">Tuyển sinh</a>
+                        <a class="nav-link text-black" href="#">Tuyển sinh</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#">Sự kiện</a>
+                        <a class="nav-link text-black" href="../login_page/event.php">Sự kiện</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="#">Khoa</a>
