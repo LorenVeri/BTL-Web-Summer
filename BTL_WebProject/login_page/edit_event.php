@@ -10,7 +10,7 @@
     <!-- CSS for me -->
     <link rel="stylesheet" href="./assets/style_admin.css">
     <link rel="stylesheet" href="./assets/style_info.css">
-    <title> Cập nhật tin tức</title>
+    <title> Cập nhật người dùng</title>
 
 </head>
 
@@ -34,45 +34,50 @@ include("./assets/config/connect-tlu.php");
             <!-- Form info -->
             <?php
             $id_edit = $_GET['id'];
-            $sql = "SELECT * FROM tb_news WHERE id = '$id_edit'";
+            $sql = "SELECT * FROM tb_event WHERE id = '$id_edit'";
             $result = mysqli_query($conn, $sql);
             //Xử lý dữ liệu 
             while ($row = mysqli_fetch_assoc($result)) {
                 $id_edit = $row['id'];
                 $title =  $row['title'];
-                $image_news =  $row['img'];
-                $date =  $row['date'];
-                $content = $row['content'];
+                $img_event =  $row['img'];
+                $content =  $row['content'];
+                $day = $row['day'];
+                $month = $row['month'];
             }
             ?>
             <div class="row">
                 <div class="col-sm-4 bd-rd">
                     <div class="card-body">
-                        <img src="<?php echo $image_news ?>" alt="img" style="width: 100%;">
+                        <img src="<?php echo $img_event ?>" alt="avatar" style="width: 100%;">
                     </div>
                 </div>
                 <div class="col-sm-8 bd-rd">
                     <div class="card-body">
-                        <form method="POST" role="form" id="form_Signin" action="./news-manager/edit_info_news.php">
+                        <form method="POST" role="form" id="form_Signin" action="./events-manager/edit_info_event.php">
                             <div class="form-id">
                                 <span for="form-id" class="f-right">ID</span>
                                 <input type="text" class="form-control f-n" name="id" value="<?php echo $id_edit ?>">
                             </div>
                             <div class="form-title">
-                                <span for="form-tilte" class="f-right">Tiêu đề</span>
+                                <span for="form-title" class="f-right">Tiêu đề</span>
                                 <input type="text" class="form-control f-n" name="title" value="<?php echo $title ?>">
                             </div>
                             <div class="form-img">
-                                <span for="form-img" class="f-right">Ảnh tin tức</span>
-                                <input type="text" class="form-control f-n" name="image_news" value="<?php echo $image_news ?>">
-                            </div>
-                            <div class="form-date">
-                                <span for="pass_signin" class="f-right">Ngày diễn ra </span>
-                                <input type="text" class="form-control f-m" name="date" value="<?php echo $date ?>">
+                                <span for="form-img" class="f-right">Ảnh sự kiện</span>
+                                <input type="text" class="form-control f-n" name="img_event" value="<?php echo $img_event ?>">
                             </div>
                             <div class="form-content">
                                 <span for="form-content" class="f-right">Nội dung</span>
                                 <input type="text" class="form-control f-m" name="content" value="<?php echo $content ?>">
+                            </div>
+                            <div class="form-day">
+                                <span for="form-day" class="f-right">Ngày tổ chức</span>
+                                <input type="text" class="form-control f-m" name="day" value="<?php echo $day ?>">
+                            </div>
+                            <div class="form-month">
+                                <span for="form-month" class="f-right">Tháng tổ chức</span>
+                                <input type="text" class="form-control f-m" name="month" value="<?php echo $month ?>">
                             </div>
                             <button class="btn btn-danger f-bot" id="submit_edit" name="submit_edit" style="margin-top: 20px;">Cập nhật</button>
                             <a href="./news.php" class="btn btn-danger f-bot" style="margin-top: 20px;">Hủy</a>

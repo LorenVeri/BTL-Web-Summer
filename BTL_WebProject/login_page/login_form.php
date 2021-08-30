@@ -36,12 +36,13 @@
     if (isset($_POST['submit_signin'])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
+        // $password = password_hash($password, PASSWORD_DEFAULT);
         //Truy vấn dữ liệu trong bảng
         $sql = "SELECT * FROM admin WHERE username='$username' AND password = '$password'";
         $result = mysqli_query($conn, $sql);
         session_start();
         if (mysqli_num_rows($result) == 1) {
-            $_SESSION['submit_signin'] = 'username';
+            $_SESSION['login'] = $username; //Tạo SESSION
             header('location: ./admin.php');
         } else {
             echo '<div class="container"> 

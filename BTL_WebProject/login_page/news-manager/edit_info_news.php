@@ -5,6 +5,7 @@ include("../assets/config/connect-tlu.php");
 if (isset($_POST['submit_edit'])) {
 
     // Lấy dữ liệu từ form lưu vào biến
+    $id_edit = $_POST['id'];
     $title =  $_POST['title'];
     $image_news =  $_POST['image_news'];
     $date =  $_POST['date'];

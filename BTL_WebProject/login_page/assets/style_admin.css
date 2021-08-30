@@ -51,7 +51,9 @@ a:active {
 /* End CSS for all */
 
 
-
+.col-sm-4 {
+    text-align: center;
+}
 
 /* Sidebar */
 .sidebar .navbar {

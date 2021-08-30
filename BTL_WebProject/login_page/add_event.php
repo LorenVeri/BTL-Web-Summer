@@ -17,17 +17,17 @@
 
 <?php
 include("./assets/config/connect-tlu.php");
-// require ("../login_page/user-manager/edit_user.php");
+
 if (isset($_POST['submit_add'])) {
     $title =  $row['title'];
-    $image_news =  $row['image_news'];
+    $image_event =  $row['image_event'];
     $content = $row['content'];
     $day =  $row['day'];
     $month =  $row['month'];
 
 
-    $sql = "INSERT INTO tb_event(title, date, img, content, day, month) 
-                   VALUES ('$title', '$date', '$image_event', '$content', '$day', '$month')";
+    $sql = "INSERT INTO tb_event(title, img, content, day, month) 
+                   VALUES ('$title', '$image_event', '$content', '$day', '$month')";
 
     if (mysqli_query($conn, $sql)) {
         header('location: ./event.php');

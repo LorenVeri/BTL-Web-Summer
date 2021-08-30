@@ -18,7 +18,10 @@
     session_start();
     // if(!isset($_SESSION['login'])) {
     //     header('location: ./login_form.php');
-    // } 
+    // }
+    if (!isset($_SESSION['login'])) {
+        header('location: ./login_form.php');
+    }
     ?>
 
     <!-- Header -->
@@ -37,28 +40,55 @@
             <div class="status">
                 <div class="row">
                     <!-- Table database -->
-                    <div class="col-sm-6 bd-rd">
+                    <div class="col-sm bd-rd">
                         <div class="card-body">
                             <div class="title">
                                 <h5>Thông tin các bản ghi</h5>
                                 <span>Thông số</span>
                             </div>
                             <div class="main">
-
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h3>
+                                            <?php
+                                            $sqlx = "SELECT * FROM can_bo";
+                                            $result = mysqli_query($conn, $sqlx);
+                                            //Xử lý kết quả: Lấy ra số bản ghi
+                                            $count_users = mysqli_num_rows($result);
+                                            echo $count_users;
+                                            ?>
+                                        </h3>
+                                        <p>Giảng viên khoa CNTT</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h3>
+                                            <?php
+                                            $sqly = "SELECT * FROM tb_news";
+                                            $result = mysqli_query($conn, $sqly);
+                                            //Xử lý kết quả: Lấy ra số bản ghi
+                                            $count_news = mysqli_num_rows($result);
+                                            echo $count_news;
+                                            ?>
+                                        </h3>
+                                        <p>Tin tức</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h3>
+                                            <?php
+                                            $sqlz = "SELECT * FROM tb_event";
+                                            $result = mysqli_query($conn, $sqlz);
+                                            //Xử lý kết quả: Lấy ra số bản ghi
+                                            $count_event = mysqli_num_rows($result);
+                                            echo $count_event;
+                                            ?>
+                                        </h3>
+                                        <p>Sự kiện</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Table -->
-                    <div class="col-sm-6 bd-rd" style="padding: 0;">
-                        <div class="card-body">
-                            <div class="title">
-                                <h5>Thông tin các bản ghi</h5>
-                                <span>Thông số</span>
-                            </div>
-                            <div class="main">
-                            </div>
-                        </div>
-                    </div>
+                    <!-- End Table -->
                 </div>
                 <!-- End Status -->
             </div>
@@ -97,31 +127,31 @@
                                     <tbody>
                                         <?php
                                         $sql2 = "SELECT * FROM can_bo";
-                                        if(isset($_POST['submit_search'])) {
+                                        if (isset($_POST['submit_search'])) {
                                             $s = $_POST['search'];
                                             $sql2 = "SELECT * FROM can_bo WHERE fullname LIKE '%$s%'";
                                         }
                                         $result1 = mysqli_query($conn, $sql2);
-    
+
                                         //Xử lý dữ liệu 
                                         if (mysqli_num_rows($result1) > 0) {
                                             $i = 0;
                                             while ($row1 = mysqli_fetch_assoc($result1)) {
                                                 $i++;
-                                                
+
                                                 $id_dv = $row1['id_don_vi'];
                                                 $sql3 = "SELECT * FROM don_vi WHERE id = $id_dv";
                                                 $result3 = mysqli_query($conn, $sql3);
-                                                $row3 = mysqli_fetch_assoc($result3); 
+                                                $row3 = mysqli_fetch_assoc($result3);
                                                 $name_dv = $row3['name'];
-    
-    
+
+
                                                 $id_cv = $row1['id_chuc_vu'];
                                                 $sql4 = "SELECT * FROM chuc_vu WHERE id = $id_cv";
                                                 $result4 = mysqli_query($conn, $sql4);
-                                                $row4 = mysqli_fetch_assoc($result4); 
+                                                $row4 = mysqli_fetch_assoc($result4);
                                                 $name_cv = $row4['name'];
-    
+
                                         ?>
                                                 <tr>
                                                     <th scope="row"><span><?php echo $i ?></span></th>
@@ -129,7 +159,7 @@
                                                         <div class="avatar-img" style="width: 150px">
                                                             <img src="<?php echo $row1['avatar'] ?>" alt="avatar" style="width: 100%;">
                                                         </div>
-    
+
                                                     </td>
                                                     <td><span><?php echo $row1['fullname'] ?></span></td>
                                                     <td><span><?php echo $name_dv ?></span></td>

@@ -214,10 +214,10 @@
     </h3>
       
     <!-- radio buttons -->
-    <input type="radio" name="radio-btn" id="radio1">
+    <!-- <input type="radio" name="radio-btn" id="radio1">
     <input type="radio" name="radio-btn" id="radio2">
     <input type="radio" name="radio-btn" id="radio3">
-    <input type="radio" name="radio-btn" id="radio4">
+    <input type="radio" name="radio-btn" id="radio4"> -->
     <!-- radio buttons end-->
     <div class="row">
       <!-- slide images  -->
@@ -225,7 +225,7 @@
         <div class="item">
           <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-NN-new.jpg" alt="" style="width: 100%">
           <div class="name">
-            Name-1
+            
           </div>
         </div>
       </div> 
@@ -233,7 +233,7 @@
         <div class="item">
           <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-Dien-DT-new.jpg" alt="" style="width: 100%">
           <div class="name">
-            Name-1
+            
           </div>
         </div>
       </div>
@@ -241,7 +241,7 @@
         <div class="item">
           <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-Toan-new.jpg" alt="" style="width: 100%">
           <div class="name">
-          Name-1
+          
           </div>
         </div>
       </div>
@@ -249,7 +249,7 @@
         <div class="item">
           <img src="https://tdtu.edu.vn/sites/www/files/Faculty/new/Khoa-CNTT-new.jpg" alt="" style="width: 100%">
           <div class="name">
-          Name-1
+          
           </div>
         </div>
       </div>

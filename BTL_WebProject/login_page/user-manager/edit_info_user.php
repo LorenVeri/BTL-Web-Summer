@@ -15,6 +15,7 @@ if (isset($_POST['submit_edit'])) {
 
     $sql = "UPDATE can_bo SET avatar = '$avatar', fullname = '$fullname', email = '$email', phone_number = '$phone_number' 
                             , address = '$address' WHERE id = '$id_edit' ";
+    
     if (mysqli_query($conn, $sql)) {
         header('location: ../admin.php');
     } else {

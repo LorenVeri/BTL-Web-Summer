@@ -20,10 +20,10 @@ if (isset($_POST['submit_register'])) {
     $phone =  $_POST['phone'];
     $email =  $_POST['email'];
     // Mã hóa password
-    $password_hash = password_hash($pass, PASSWORD_DEFAULT);
+    $password = password_hash($pass, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO admin(fullname, username, password, number_phone, email) 
-                       VALUES ('$fullname', '$username', '$password_hash', '$phone', '$email')";
+                       VALUES ('$fullname', '$username', '$pass', '$phone', '$email')";
 
     if (mysqli_query($conn, $sql)) {
         header('location: login_form.php');
